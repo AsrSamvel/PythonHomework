@@ -8,16 +8,15 @@
 
 word = input("Введите стихотворение: ")
 list = word.split()
-dictionary = {}
+list1 = []
 vowels = "аеёиоуыэюя"
 for word in list:
     count = 0
     for letter in word:
         if letter in vowels:
             count = count + 1
-    dictionary[word] = count
+    list1.append(count)
 
-set = [(dictionary[key]) for key in dictionary]
 res = False
 
 def chkList(lst):
@@ -30,5 +29,4 @@ def chkList(lst):
     else:
         print("Пам парам")
 
-
-chkList(set)
+chkList(list1)
